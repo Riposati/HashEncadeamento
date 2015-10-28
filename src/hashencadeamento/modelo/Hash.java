@@ -2,6 +2,7 @@ package hashencadeamento.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Hash {
 
@@ -32,19 +33,19 @@ public class Hash {
     public int pesquisaArray(int chave) {
 
         int funcaoHash = chave % this.vetPai.size();
-        int valor = -1, i;
-        boolean flag = false;
+        int valor = 0, i=1;
 
-        List<Chave> listaChaves = vetPai.get(funcaoHash).getChaves();
-
-        for (i = 0; i < listaChaves.size() && flag == false; i++) {
-
-            if (listaChaves.get(i).getChave() == chave) {
+        Set<Chave>listaChaves = vetPai.get(funcaoHash).getChaves();
+        
+        for (Chave chaveFor : listaChaves) {
+            
+            if (chaveFor.getChave() == chave) {
                 valor = i;
-                flag = true;
+                break;
             }
+            i++;
         }
-        System.out.println("Posição no hash onde está essa chave = " + funcaoHash);
+        System.out.println("Posição no hash onde está essa chave = " + (funcaoHash + 1));
         return valor;
     }
 

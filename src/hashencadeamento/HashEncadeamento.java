@@ -24,8 +24,7 @@ public class HashEncadeamento {
         hash.addArray(4);
 
         System.out.println(hash);
-        System.out.println("\nChave buscada = " + 5);
-        int valor = hash.pesquisaArray(5);
+        int valor = hash.pesquisaArray(22);
         System.out.println("Posição na lista onde está essa chave = " + valor);
     }
 

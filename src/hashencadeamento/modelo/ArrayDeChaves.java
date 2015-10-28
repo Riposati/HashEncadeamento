@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hashencadeamento.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -14,18 +9,18 @@ import java.util.List;
  */
 public class ArrayDeChaves {
 
-    private List<Chave> chaves;
+    private Set<Chave> chaves;
 
     public ArrayDeChaves() {
 
-        chaves = new ArrayList<>();
+        chaves = new HashSet<>();
     }
 
-    public List<Chave> getChaves() {
+    public Set<Chave> getChaves() {
         return chaves;
     }
 
-    public void setChaves(List<Chave> chaves) {
+    public void setChaves(Set<Chave> chaves) {
         this.chaves = chaves;
     }
 
